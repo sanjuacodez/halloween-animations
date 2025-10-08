@@ -1,0 +1,63 @@
+MIT License
+
+Copyright (c) 2024 Sanjay Shankar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Libraries and Resources
+
+This plugin may include or be inspired by third-party libraries and resources. 
+Below are the acknowledgments and licenses for these components:
+
+### Inspiration
+- **jquery-halloween-bats**: The flying bats animation is inspired by the 
+  jquery-halloween-bats project by Artimon (https://github.com/Artimon/jquery-halloween-bats)
+  
+### Emoji Characters
+- This plugin uses emoji characters (🦇, 👻, 🎃, 🍂, 🕷️, etc.) which are part of the 
+  Unicode standard and are freely available for use.
+
+### Sound Effects (if included)
+- Sound effects, if included, may be sourced from various free and open-source 
+  libraries. Each sound file should be checked for its individual license terms.
+  Common sources include:
+  - Freesound.org (Creative Commons licenses)
+  - YouTube Audio Library (No attribution required)
+  - Zapsplat.com (with appropriate licensing)
+
+### WordPress Framework
+- This plugin is built for WordPress and utilizes WordPress APIs and functions
+  which are licensed under GPL v2 or later.
+
+## Additional Notes
+
+- This plugin follows WordPress coding standards and best practices
+- All custom code is released under the MIT License as stated above
+- When using this plugin, please ensure compliance with all applicable licenses
+- For commercial use, please verify that all components are appropriately licensed
+
+## Contact
+
+For license questions or clarifications, please contact:
+- Email: sanjayshankar.m@gmail.com
+- GitHub: https://github.com/sanjuacodez
+
+Last updated: October 7, 2024

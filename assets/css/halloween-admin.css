@@ -1,0 +1,700 @@
+/**
+ * Halloween Effects Admin Styles
+ * 
+ * @package Halloween_Animations
+ */
+
+/* Admin Header Styling */
+.halloween-admin-header {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff6b35 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.halloween-admin-header p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Settings Form Styling */
+.halloween-animation-setting {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.halloween-animation-setting label {
+    font-weight: 600;
+    color: #333;
+}
+
+.halloween-sub-settings {
+    background: #f9f9f9;
+    border-left: 3px solid #ff6b35;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.halloween-sub-settings label {
+    font-weight: normal;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.halloween-sub-settings input[type="number"],
+.halloween-sub-settings select {
+    margin-left: 5px;
+}
+
+/* Display Options Styling */
+.halloween-display-options {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.halloween-display-options h4,
+.halloween-display-options h5 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.halloween-display-options label {
+    display: block;
+    margin: 8px 0;
+    padding: 5px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.halloween-display-options label:hover {
+    background-color: #f5f5f5;
+}
+
+.halloween-display-options input[type="radio"],
+.halloween-display-options input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Preview Section */
+.halloween-preview-section {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.halloween-preview-section::before {
+    content: '🎃👻🦇🕷️';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    opacity: 0.3;
+}
+
+.halloween-preview-section h2 {
+    color: #ff6b35;
+    margin-top: 0;
+}
+
+.halloween-preview-buttons {
+    margin-top: 15px;
+}
+
+.halloween-preview-buttons .button {
+    margin: 5px 10px 5px 0;
+    background: #34495e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.halloween-preview-buttons .button:hover {
+    background: #ff6b35;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+}
+
+/* Test Animation Buttons */
+.test-animation {
+    background: #e67e22 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+.test-animation:hover {
+    background: #d35400 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 4px rgba(211, 84, 0, 0.3) !important;
+}
+
+.test-animation.testing {
+    background: #95a5a6 !important;
+    cursor: not-allowed !important;
+}
+
+/* Settings Sections */
+.form-table th {
+    color: #333;
+    font-weight: 600;
+}
+
+.form-table td {
+    vertical-align: top;
+    padding-top: 15px;
+}
+
+/* Custom Toggle Switches */
+.halloween-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.halloween-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.halloween-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.halloween-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .halloween-slider {
+    background-color: #ff6b35;
+}
+
+input:checked + .halloween-slider:before {
+    transform: translateX(26px);
+}
+
+/* Animation Preview Elements */
+.admin-preview-bats {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+}
+
+.admin-preview-bats > div {
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    background-size: cover;
+}
+
+.admin-preview-ghost {
+    position: fixed;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 999999;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    pointer-events: none;
+}
+
+.admin-preview-pumpkin {
+    position: fixed;
+    font-size: 60px;
+    z-index: 999999;
+    pointer-events: none;
+}
+
+.admin-preview-leaves {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+}
+
+.admin-preview-leaves > div {
+    position: absolute;
+    font-size: 24px;
+    color: #8B4513;
+}
+
+.admin-preview-spider {
+    position: fixed;
+    font-size: 28px;
+    color: #2c1810;
+    z-index: 999999;
+    pointer-events: none;
+}
+
+.admin-preview-fog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 999999;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.admin-preview-fog > div {
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* Legacy animations for fallback */
+@keyframes admin-preview-fly {
+    0% { transform: translateX(-100px) translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateX(200px) translateY(-50px) rotate(180deg); opacity: 0; }
+}
+
+@keyframes admin-preview-float {
+    0%, 100% { transform: translateY(0) rotate(-5deg); opacity: 0.7; }
+    50% { transform: translateY(-20px) rotate(5deg); opacity: 1; }
+}
+
+@keyframes admin-preview-run {
+    0% { transform: translateX(-80px) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateX(200px) rotate(360deg); opacity: 0; }
+}
+
+@keyframes admin-preview-fall {
+    0% { transform: translateY(-50px) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(100px) rotate(180deg); opacity: 0; }
+}
+
+@keyframes admin-preview-crawl-vertical {
+    0% { transform: translateY(-50px); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(150px); opacity: 0; }
+}
+
+@keyframes admin-preview-fog {
+    0% { opacity: 0; transform: translateX(-100px); }
+    20% { opacity: 0.8; }
+    80% { opacity: 0.8; }
+    100% { opacity: 0; transform: translateX(100px); }
+}
+
+/* Success Messages */
+.notice.halloween-success {
+    border-left-color: #ff6b35;
+}
+
+.notice.halloween-success p {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 782px) {
+    .halloween-admin-header {
+        padding: 15px;
+    }
+    
+    .halloween-preview-buttons .button {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    .halloween-animation-setting {
+        padding: 10px;
+    }
+    
+    .test-animation {
+        margin-top: 10px !important;
+        margin-left: 0 !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .halloween-animation-setting {
+        background: #1e1e1e;
+        border-color: #333;
+        color: #fff;
+    }
+    
+    .halloween-animation-setting label {
+        color: #fff !important;
+    }
+    
+    .halloween-animation-setting h4,
+    .halloween-animation-setting h5 {
+        color: #fff !important;
+    }
+    
+    .halloween-sub-settings {
+        background: #2a2a2a;
+        border-left-color: #ff6b35;
+        color: #fff;
+    }
+    
+    .halloween-sub-settings label {
+        color: #fff !important;
+    }
+    
+    .halloween-display-options {
+        background: #1e1e1e;
+        border-color: #333;
+        color: #fff;
+    }
+    
+    .halloween-display-options h4,
+    .halloween-display-options h5 {
+        color: #fff !important;
+        border-bottom-color: #444;
+    }
+    
+    .halloween-display-options label {
+        color: #fff !important;
+    }
+    
+    .halloween-display-options label:hover {
+        background-color: #333;
+    }
+    
+    /* Form elements in dark mode */
+    .halloween-animation-setting input[type="number"],
+    .halloween-animation-setting select,
+    .halloween-sub-settings input[type="number"],
+    .halloween-sub-settings select {
+        background: #333;
+        color: #fff;
+        border-color: #555;
+    }
+    
+    .halloween-display-options input[type="radio"],
+    .halloween-display-options input[type="checkbox"] {
+        accent-color: #ff6b35;
+    }
+    
+    /* Admin header in dark mode */
+    .halloween-admin-header {
+        background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff6b35 100%);
+        color: white; /* Already white, but ensuring consistency */
+    }
+    
+    /* Preview section in dark mode */
+    .halloween-preview-section {
+        background: #1a1a1a;
+        color: white;
+        border: 1px solid #333;
+    }
+    
+    .halloween-preview-section h2 {
+        color: #ff6b35;
+    }
+}
+
+/* WordPress Admin Dark Color Schemes */
+.admin-color-midnight .halloween-animation-setting,
+.admin-color-blue .halloween-animation-setting,
+.admin-color-coffee .halloween-animation-setting,
+.admin-color-ectoplasm .halloween-animation-setting,
+.admin-color-ocean .halloween-animation-setting,
+.admin-color-sunrise .halloween-animation-setting {
+    background: #23282d;
+    border-color: #3c4043;
+    color: #fff;
+}
+
+.admin-color-midnight .halloween-animation-setting label,
+.admin-color-blue .halloween-animation-setting label,
+.admin-color-coffee .halloween-animation-setting label,
+.admin-color-ectoplasm .halloween-animation-setting label,
+.admin-color-ocean .halloween-animation-setting label,
+.admin-color-sunrise .halloween-animation-setting label {
+    color: #fff !important;
+}
+
+.admin-color-midnight .halloween-sub-settings,
+.admin-color-blue .halloween-sub-settings,
+.admin-color-coffee .halloween-sub-settings,
+.admin-color-ectoplasm .halloween-sub-settings,
+.admin-color-ocean .halloween-sub-settings,
+.admin-color-sunrise .halloween-sub-settings {
+    background: #32373c;
+    color: #fff;
+}
+
+.admin-color-midnight .halloween-sub-settings label,
+.admin-color-blue .halloween-sub-settings label,
+.admin-color-coffee .halloween-sub-settings label,
+.admin-color-ectoplasm .halloween-sub-settings label,
+.admin-color-ocean .halloween-sub-settings label,
+.admin-color-sunrise .halloween-sub-settings label {
+    color: #fff !important;
+}
+
+.admin-color-midnight .halloween-display-options,
+.admin-color-blue .halloween-display-options,
+.admin-color-coffee .halloween-display-options,
+.admin-color-ectoplasm .halloween-display-options,
+.admin-color-ocean .halloween-display-options,
+.admin-color-sunrise .halloween-display-options {
+    background: #23282d;
+    border-color: #3c4043;
+    color: #fff;
+}
+
+.admin-color-midnight .halloween-display-options label,
+.admin-color-blue .halloween-display-options label,
+.admin-color-coffee .halloween-display-options label,
+.admin-color-ectoplasm .halloween-display-options label,
+.admin-color-ocean .halloween-display-options label,
+.admin-color-sunrise .halloween-display-options label {
+    color: #fff !important;
+}
+
+.admin-color-midnight .halloween-display-options h4,
+.admin-color-midnight .halloween-display-options h5,
+.admin-color-blue .halloween-display-options h4,
+.admin-color-blue .halloween-display-options h5,
+.admin-color-coffee .halloween-display-options h4,
+.admin-color-coffee .halloween-display-options h5,
+.admin-color-ectoplasm .halloween-display-options h4,
+.admin-color-ectoplasm .halloween-display-options h5,
+.admin-color-ocean .halloween-display-options h4,
+.admin-color-ocean .halloween-display-options h5,
+.admin-color-sunrise .halloween-display-options h4,
+.admin-color-sunrise .halloween-display-options h5 {
+    color: #fff !important;
+    border-bottom-color: #3c4043;
+}
+
+.admin-color-midnight .halloween-display-options label:hover,
+.admin-color-blue .halloween-display-options label:hover,
+.admin-color-coffee .halloween-display-options label:hover,
+.admin-color-ectoplasm .halloween-display-options label:hover,
+.admin-color-ocean .halloween-display-options label:hover,
+.admin-color-sunrise .halloween-display-options label:hover {
+    background-color: #32373c;
+}
+
+/* Form inputs in WordPress dark themes */
+.admin-color-midnight .halloween-animation-setting input[type="number"],
+.admin-color-midnight .halloween-animation-setting select,
+.admin-color-midnight .halloween-sub-settings input[type="number"],
+.admin-color-midnight .halloween-sub-settings select,
+.admin-color-blue .halloween-animation-setting input[type="number"],
+.admin-color-blue .halloween-animation-setting select,
+.admin-color-blue .halloween-sub-settings input[type="number"],
+.admin-color-blue .halloween-sub-settings select,
+.admin-color-coffee .halloween-animation-setting input[type="number"],
+.admin-color-coffee .halloween-animation-setting select,
+.admin-color-coffee .halloween-sub-settings input[type="number"],
+.admin-color-coffee .halloween-sub-settings select,
+.admin-color-ectoplasm .halloween-animation-setting input[type="number"],
+.admin-color-ectoplasm .halloween-animation-setting select,
+.admin-color-ectoplasm .halloween-sub-settings input[type="number"],
+.admin-color-ectoplasm .halloween-sub-settings select,
+.admin-color-ocean .halloween-animation-setting input[type="number"],
+.admin-color-ocean .halloween-animation-setting select,
+.admin-color-ocean .halloween-sub-settings input[type="number"],
+.admin-color-ocean .halloween-sub-settings select,
+.admin-color-sunrise .halloween-animation-setting input[type="number"],
+.admin-color-sunrise .halloween-animation-setting select,
+.admin-color-sunrise .halloween-sub-settings input[type="number"],
+.admin-color-sunrise .halloween-sub-settings select {
+    background: #32373c;
+    color: #fff;
+    border-color: #3c4043;
+}
+
+/* Halloween Sound Settings */
+.halloween-sound-settings {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.halloween-sound-settings h4 {
+    color: #ff6b35;
+    margin: 15px 0 10px 0;
+    font-weight: bold;
+    border-bottom: 2px solid #ff6b35;
+    padding-bottom: 5px;
+}
+
+.halloween-sound-settings label {
+    display: block;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+.halloween-sound-settings input[type="radio"] {
+    margin-right: 8px;
+}
+
+.halloween-sound-settings input[type="number"] {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.halloween-sound-settings input[type="range"] {
+    margin: 0 10px;
+}
+
+.halloween-sound-settings small {
+    color: #666;
+    font-style: italic;
+}
+
+/* Sound file selection grid */
+.halloween-sound-settings > div[style*="grid"] label {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.halloween-sound-settings > div[style*="grid"] label:hover {
+    background: #e3f2fd !important;
+    border-color: #ff6b35 !important;
+}
+
+.halloween-sound-settings > div[style*="grid"] label input:checked + span {
+    font-weight: bold;
+    color: #ff6b35;
+}
+
+/* Test sounds button styling */
+.test-sounds {
+    background: linear-gradient(135deg, #ff6b35, #f7931e) !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 20px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2) !important;
+}
+
+.test-sounds:hover {
+    background: linear-gradient(135deg, #e55a2b, #e8841a) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3) !important;
+}
+
+.test-sounds:active {
+    transform: translateY(0) !important;
+}
+
+/* Dark mode support for sound settings */
+.admin-color-midnight .halloween-sound-settings,
+.admin-color-blue .halloween-sound-settings,
+.admin-color-coffee .halloween-sound-settings,
+.admin-color-ectoplasm .halloween-sound-settings,
+.admin-color-ocean .halloween-sound-settings,
+.admin-color-sunrise .halloween-sound-settings {
+    background: #1e1e1e;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.admin-color-midnight .halloween-sound-settings input[type="number"],
+.admin-color-blue .halloween-sound-settings input[type="number"],
+.admin-color-coffee .halloween-sound-settings input[type="number"],
+.admin-color-ectoplasm .halloween-sound-settings input[type="number"],
+.admin-color-ocean .halloween-sound-settings input[type="number"],
+.admin-color-sunrise .halloween-sound-settings input[type="number"] {
+    background: #2d2d2d;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+.admin-color-midnight .halloween-sound-settings small,
+.admin-color-blue .halloween-sound-settings small,
+.admin-color-coffee .halloween-sound-settings small,
+.admin-color-ectoplasm .halloween-sound-settings small,
+.admin-color-ocean .halloween-sound-settings small,
+.admin-color-sunrise .halloween-sound-settings small {
+    color: #aaa;
+}
+
+
+/* Enhanced sound mode selection styling */
+.halloween-sound-settings label[style*="display: block"][style*="padding: 10px"] {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.halloween-sound-settings label[style*="display: block"][style*="padding: 10px"]:hover {
+    background: #e8f4f8 !important;
+    border-color: #ff6b35 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.1);
+}
+
+.halloween-sound-settings input[type="radio"]:checked + strong {
+    color: #ff6b35;
+}
+
+.halloween-sound-settings div[style*="background: #f0f8ff"] {
+    border-left: 4px solid #ff6b35;
+}
+
+/* Mode-specific styling when selected */
+.halloween-sound-settings input[value="ambient"]:checked ~ * {
+    border-color: #2196F3 !important;
+}
+
+.halloween-sound-settings input[value="random"]:checked ~ * {
+    border-color: #FF9800 !important;
+}
+
+.halloween-sound-settings input[value="playlist"]:checked ~ * {
+    border-color: #4CAF50 !important;
+}
+
+.halloween-sound-settings input[value="chaos"]:checked ~ * {
+    border-color: #F44336 !important;
+}
