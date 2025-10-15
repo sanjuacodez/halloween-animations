@@ -265,6 +265,16 @@ Transform your WordPress site into a spooky spectacular experience. Whether you'
 
 **Made with 💜 by [Sanjay Shankar](https://sanjayshankar.me)**
 
+## ☕ Support the Developer
+
+If you find this plugin helpful and want to support continued development, consider buying me a coffee! Your support helps me create more awesome WordPress plugins and keep them updated.
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support%20Development-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://buymeacoffee.com/sanjayshankar)
+
+[**☕ Buy me a coffee**](https://buymeacoffee.com/sanjayshankar)
+
+Every coffee helps fuel late-night coding sessions and new feature development! 🚀
+
 ---
 
 *If you find this plugin helpful, please consider leaving a review on WordPress.org and starring the repository on GitHub! 🌟*
@@ -353,35 +363,30 @@ Transform your WordPress site into a spooky spectacular experience. Whether you'
 
 3. Extract the files2. Enable the animations you want to use
 
-4. Activate through the WordPress **Plugins** menu3. Adjust the count and speed for each effect
+4. Activate through the WordPress **Plugins** menu
+5. Configure settings in **Settings > Halloween Animations**
 
-5. Configure settings in **Settings > Halloween Animations**4. Choose where to display the effects (entire site, specific pages, etc.)
-
-5. Optionally enable spooky sounds
-
-### From GitHub6. Save your settings
-
+### From GitHub
 ```bash
-
-cd wp-content/plugins/### Animation Settings
-
+cd wp-content/plugins/
 git clone https://github.com/sanjuacodez/halloween-animations.git
+```
 
-```#### Flying Bats
+## ⚙️ Configuration
 
-- **Count**: 1-20 bats
-
-## ⚙️ Configuration- **Speed**: Slow, Medium, Fast
-
-- **Behavior**: Sprite-based bats with realistic wing-flapping animation and intelligent flight patterns
-
-### Basic Setup- **Technology**: Uses a 4-frame sprite sheet for smooth wing animation
-
+### Basic Setup
 1. **Activate the Plugin**: Enable Halloween Animations from your WordPress admin
+2. **Choose Display Pages**: Select where animations should appear (homepage, all pages, or specific pages)
+3. **Configure Animations**: Enable/disable individual effects and adjust their settings
+4. **Set Up Sounds**: Choose sound mode and configure audio preferences
 
-2. **Choose Display Pages**: Select where animations should appear#### Floating Ghosts
-
-3. **Configure Animations**: Enable/disable individual effects and adjust their settings- **Count**: 1-20 ghosts
+### Animation Settings
+- **Bats**: Adjust count (1-20) and speed (slow/medium/fast) for realistic flight patterns
+- **Ghosts**: Control quantity (1-10) and floating speed for ethereal movement
+- **Pumpkin**: Set running speed and appearance frequency
+- **Leaves**: Configure fall count (1-20) and natural drift patterns
+- **Spiders**: Adjust crawling count (1-5) and vertical movement style
+- **Fog**: Enable atmospheric fog effects with particle density control
 
 4. **Set Up Sounds**: Choose sound mode and configure audio preferences- **Speed**: Slow, Medium, Fast
 
@@ -643,61 +648,82 @@ Sanjay Shankar is a passionate WordPress developer with expertise in creating en
 
 ### Effects Not Showing
 
-### Common Issues1. Check that the effects are enabled in Settings > Halloween Effects
+### Common Issues
 
-- **Animations not showing**: Check if animations are enabled and display settings are correct2. Verify the display settings match your current page type
+**Animations not showing:**
+1. Check if animations are enabled in plugin settings
+2. Verify display page settings are correct
+3. Ensure theme is compatible with jQuery animations
+4. Check browser console for JavaScript errors
 
-- **Sound not playing**: Verify browser autoplay policies and sound settings3. Ensure your theme doesn't have conflicting CSS
-
-- **Performance issues**: Try reducing animation counts or disabling some effects4. Check browser console for JavaScript errors
-
-
-
-## 📄 License### Performance Issues
-
-1. Reduce the number of animated elements
-
-This plugin is licensed under the **GPL v2 or later**.2. Disable effects on mobile devices
-
-3. Use slower animation speeds
-
-```4. Disable sound effects if not needed
-
-Halloween Animations is free software: you can redistribute it and/or modify
-
-it under the terms of the GNU General Public License as published by### Sound Not Working
-
-the Free Software Foundation, either version 2 of the License, or1. Click the sound enable button when it appears
-
-any later version.2. Check that sounds are enabled in plugin settings
-
+**Sound not playing:**
+1. Click the sound enable button when it appears
+2. Check that sounds are enabled in plugin settings
 3. Ensure browser allows audio playback
+4. Check that audio files are accessible
 
-Halloween Animations is distributed in the hope that it will be useful,4. Check that audio files are accessible
+**Performance issues:**
+1. Reduce the number of animated elements
+2. Disable effects on mobile devices
+3. Use slower animation speeds
+4. Disable sound effects if not needed
 
-but WITHOUT ANY WARRANTY; without even the implied warranty of
+## 📝 Changelog
 
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the## Changelog
-
-GNU General Public License for more details.
-
-```### Version 1.0.0
-
+### Version 1.0.0
 - Initial release
-
-## 🎃 Happy Halloween!- Flying bats with sprite-based animation system and multiple flight patterns  
-
+- Flying bats with sprite-based animation system and multiple flight patterns  
 - Floating ghosts with realistic ethereal movement and glow effects
-
-Transform your WordPress site into a spooky spectacular experience. Whether you're running a Halloween event, seasonal business, or just want to add some fun to your site, Halloween Animations brings the perfect blend of spook and delight to your visitors.- Running pumpkin animation with rotation effects
-
+- Running pumpkin animation with rotation effects
 - Falling leaves with natural drift and rotation patterns
-
-**Made with 💜 by [Sanjay Shankar](https://sanjayshankar.me)**- Crawling spiders with vertical movement and web-line effects
-
+- Crawling spiders with vertical movement and web-line effects
 - Advanced multi-particle fog system with realistic atmospheric effects
+- Enhanced sound system with 4 distinct playback modes (Ambient, Random, Playlist, Chaos)
+- Comprehensive admin controls with live animation testing
+- Complete display targeting options for precise control
+- Mobile optimization with device-specific controls
+- Accessibility features including reduced motion support
+- Cross-browser compatibility and performance optimizations
+- Developer-friendly code with hooks and filters
 
----- Enhanced sound system with 4 distinct playback modes (Ambient, Random, Playlist, Chaos)
+## 👨‍💻 Author
+
+**Sanjay Shankar**
+- Website: [sanjayshankar.me](https://sanjayshankar.me)
+- GitHub: [@sanjuacodez](https://github.com/sanjuacodez)
+- WordPress.org: [sanju-shankar](https://profiles.wordpress.org/sanju-shankar/)
+
+### About the Developer
+Sanjay Shankar is a passionate WordPress developer with expertise in creating engaging user experiences through innovative plugins and themes. With a focus on performance, security, and user-friendly design, Sanjay brings creative solutions to the WordPress community.
+
+**Specialties:**
+- WordPress Plugin Development
+- JavaScript Animation Systems
+- User Interface Design
+- Performance Optimization
+- Security Best Practices
+
+## Credits
+
+- Inspired by the [jquery-halloween-bats](https://github.com/Artimon/jquery-halloween-bats) project
+- Halloween emoji characters for visual effects
+- Sound effects optimized for web delivery
+
+## 📄 License
+
+This plugin is licensed under the **GPL v2 or later**.
+
+```
+Halloween Animations is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+any later version.
+
+Halloween Animations is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+```
 
 - Comprehensive admin controls with live animation testing
 
@@ -707,20 +733,6 @@ Transform your WordPress site into a spooky spectacular experience. Whether you'
 - Cross-browser compatibility and performance optimizations
 - Developer-friendly code with hooks and filters
 
-## Credits
-
-- Inspired by the [jquery-halloween-bats](https://github.com/Artimon/jquery-halloween-bats) project
-- Halloween emoji characters for visual effects
-- Sound effects optimized for web delivery
-
-## Support
-
-For support, feature requests, or bug reports, please visit the plugin's support forum or contact the developer.
-
-## License
-
-This plugin is licensed under the GPL v2 or later.
-
 ---
 
-**Transform your WordPress site into a spooky Halloween destination! 🎃👻🦇**
+*If you find this plugin helpful, please consider leaving a review on WordPress.org and starring the repository on GitHub! �*
