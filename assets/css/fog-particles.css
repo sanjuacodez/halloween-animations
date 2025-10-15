@@ -1,0 +1,157 @@
+/* Advanced Fog Effect - Inspired by StackBlitz fog animation */
+#halloween-fog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.fog-particle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.6;
+    animation: fog-drift 20s infinite linear;
+    will-change: transform;
+}
+
+/* Individual fog particles with different sizes and positions */
+.fog-particle-1 {
+    width: 300px;
+    height: 100px;
+    background: radial-gradient(ellipse, rgba(200, 200, 200, 0.8) 0%, transparent 70%);
+    bottom: -20px;
+    left: -150px;
+    animation-duration: 25s;
+    animation-delay: 0s;
+}
+
+.fog-particle-2 {
+    width: 400px;
+    height: 120px;
+    background: radial-gradient(ellipse, rgba(180, 180, 180, 0.6) 0%, transparent 70%);
+    bottom: 10px;
+    left: -200px;
+    animation-duration: 30s;
+    animation-delay: -5s;
+    animation-direction: reverse;
+}
+
+.fog-particle-3 {
+    width: 250px;
+    height: 80px;
+    background: radial-gradient(ellipse, rgba(190, 190, 190, 0.7) 0%, transparent 70%);
+    bottom: 40px;
+    left: -125px;
+    animation-duration: 35s;
+    animation-delay: -10s;
+}
+
+.fog-particle-4 {
+    width: 350px;
+    height: 110px;
+    background: radial-gradient(ellipse, rgba(170, 170, 170, 0.5) 0%, transparent 70%);
+    bottom: -10px;
+    left: -175px;
+    animation-duration: 28s;
+    animation-delay: -15s;
+    animation-direction: reverse;
+}
+
+.fog-particle-5 {
+    width: 280px;
+    height: 90px;
+    background: radial-gradient(ellipse, rgba(160, 160, 160, 0.6) 0%, transparent 70%);
+    bottom: 60px;
+    left: -140px;
+    animation-duration: 32s;
+    animation-delay: -8s;
+}
+
+.fog-particle-6 {
+    width: 320px;
+    height: 100px;
+    background: radial-gradient(ellipse, rgba(150, 150, 150, 0.4) 0%, transparent 70%);
+    bottom: 20px;
+    left: -160px;
+    animation-duration: 26s;
+    animation-delay: -12s;
+    animation-direction: reverse;
+}
+
+.fog-particle-7 {
+    width: 200px;
+    height: 70px;
+    background: radial-gradient(ellipse, rgba(140, 140, 140, 0.7) 0%, transparent 70%);
+    bottom: 80px;
+    left: -100px;
+    animation-duration: 38s;
+    animation-delay: -20s;
+}
+
+.fog-particle-8 {
+    width: 450px;
+    height: 130px;
+    background: radial-gradient(ellipse, rgba(130, 130, 130, 0.3) 0%, transparent 70%);
+    bottom: -30px;
+    left: -225px;
+    animation-duration: 24s;
+    animation-delay: -3s;
+    animation-direction: reverse;
+}
+
+@keyframes fog-drift {
+    0% {
+        transform: translateX(0) translateY(0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateX(calc(100vw + 400px)) translateY(-20px) scale(1.1);
+        opacity: 0;
+    }
+}
+
+/* Enhanced fog for dark backgrounds */
+@media (prefers-color-scheme: dark) {
+    .fog-particle {
+        filter: blur(35px);
+    }
+    
+    .fog-particle-1 { background: radial-gradient(ellipse, rgba(220, 220, 220, 0.9) 0%, transparent 70%); }
+    .fog-particle-2 { background: radial-gradient(ellipse, rgba(200, 200, 200, 0.7) 0%, transparent 70%); }
+    .fog-particle-3 { background: radial-gradient(ellipse, rgba(210, 210, 210, 0.8) 0%, transparent 70%); }
+    .fog-particle-4 { background: radial-gradient(ellipse, rgba(190, 190, 190, 0.6) 0%, transparent 70%); }
+    .fog-particle-5 { background: radial-gradient(ellipse, rgba(180, 180, 180, 0.7) 0%, transparent 70%); }
+    .fog-particle-6 { background: radial-gradient(ellipse, rgba(170, 170, 170, 0.5) 0%, transparent 70%); }
+    .fog-particle-7 { background: radial-gradient(ellipse, rgba(160, 160, 160, 0.8) 0%, transparent 70%); }
+    .fog-particle-8 { background: radial-gradient(ellipse, rgba(150, 150, 150, 0.4) 0%, transparent 70%); }
+}
+
+/* Fog atmosphere animation */
+@keyframes fog-atmosphere {
+    0%, 100% { 
+        filter: brightness(1) contrast(1);
+    }
+    50% { 
+        filter: brightness(1.1) contrast(1.05);
+    }
+}
+
+#halloween-fog {
+    animation: fog-atmosphere 12s ease-in-out infinite;
+}
+
+/* Ensure fog is visible on all backgrounds */
+#halloween-fog .fog-particle {
+    mix-blend-mode: screen;
+}

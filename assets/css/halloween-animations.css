@@ -1,0 +1,497 @@
+/**
+ * Halloween Effects Frontend Styles
+ * 
+<<<<<<< HEAD
+ * @package Halloween_Animations
+=======
+ * @package Halloween_Animations
+>>>>>>> d40ae4f91eb461eefcea8ac1724065ecfd65dffd
+ */
+
+/* Container for all Halloween effects */
+#halloween-animations-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Flying Bats Animation */
+#halloween-bats {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.halloween-bat-sprite {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.9;
+    /* Background image will be set via JavaScript */
+}
+
+/* Fallback for old bat style (if needed) */
+.halloween-bat {
+    position: absolute;
+    font-size: 24px;
+    color: #2c1810;
+    pointer-events: none;
+    animation: fly-bat 15s linear infinite;
+    opacity: 0.8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fly-bat {
+    0% {
+        transform: translateX(-100px) translateY(50vh) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.8;
+    }
+    95% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(calc(100vw + 100px)) translateY(20vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Floating Ghosts Animation */
+#halloween-ghosts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.halloween-ghost {
+    position: absolute;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.9);
+    pointer-events: none;
+    animation: float-ghost 20s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes float-ghost {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(-5deg);
+        opacity: 0.7;
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px) rotate(5deg);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(-40px) translateX(-5px) rotate(-3deg);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateY(-10px) translateX(15px) rotate(3deg);
+        opacity: 0.9;
+    }
+}
+
+/* Running Pumpkin Animation */
+#halloween-pumpkin {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 60px;
+}
+
+.halloween-pumpkin {
+    position: absolute;
+    font-size: 40px;
+    bottom: 0;
+    animation: run-pumpkin 12s linear infinite;
+    filter: drop-shadow(0 4px 8px rgba(255, 165, 0, 0.4));
+}
+
+@keyframes run-pumpkin {
+    0% {
+        transform: translateX(-80px) rotate(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(calc(100vw + 80px)) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Falling Leaves Animation */
+#halloween-leaves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.halloween-leaf {
+    position: absolute;
+    font-size: 20px;
+    color: #8B4513;
+    pointer-events: none;
+    animation: fall-leaf 8s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes fall-leaf {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(calc(100vh + 100px)) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Crawling Spiders Animation */
+#halloween-spiders {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.halloween-spider {
+    position: absolute;
+    font-size: 18px;
+    color: #2c1810;
+    pointer-events: none;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+}
+
+/* Spider dropping from top (upside down) */
+.halloween-spider.spider-dropping {
+    transform: rotate(180deg);
+    animation: spider-swing-inverted 4s ease-in-out infinite;
+}
+
+/* Spider climbing up from bottom (normal orientation) */
+.halloween-spider.spider-climbing {
+    transform: rotate(0deg);
+    animation: spider-crawl-up 2s ease-in-out infinite;
+}
+
+/* Spider web line effect */
+.spider-web-line {
+    position: absolute;
+    background: linear-gradient(to bottom, 
+        rgba(200, 200, 200, 0.8) 0%, 
+        rgba(200, 200, 200, 0.4) 50%, 
+        rgba(200, 200, 200, 0.8) 100%);
+    box-shadow: 
+        0 0 1px rgba(255, 255, 255, 0.5),
+        inset 0 0 1px rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+/* Subtle swinging animation for dropping spiders (inverted) */
+@keyframes spider-swing-inverted {
+    0%, 100% { transform: rotate(180deg) translateX(-2px); }
+    50% { transform: rotate(180deg) translateX(2px); }
+}
+
+/* Climbing animation for spiders going up */
+@keyframes spider-crawl-up {
+    0%, 100% { transform: rotate(0deg) translateY(0px); }
+    25% { transform: rotate(-1deg) translateY(-1px); }
+    50% { transform: rotate(0deg) translateY(0px); }
+    75% { transform: rotate(1deg) translateY(-1px); }
+}
+
+/* Legacy spider animation (fallback) */
+@keyframes crawl-spider {
+    0% {
+        transform: translateX(-50px) translateY(0);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.9;
+    }
+    25% {
+        transform: translateX(20vw) translateY(10vh);
+    }
+    50% {
+        transform: translateX(40vw) translateY(5vh);
+    }
+    75% {
+        transform: translateX(70vw) translateY(15vh);
+    }
+    95% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateX(calc(100vw + 50px)) translateY(8vh);
+        opacity: 0;
+    }
+}
+
+/* Advanced Fog Effect - Inspired by StackBlitz fog animation */
+#halloween-fog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9998;
+    animation: fog-atmosphere 12s ease-in-out infinite;
+}
+
+.fog-particle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.8;
+    animation: fog-drift 20s infinite linear;
+    will-change: transform;
+    mix-blend-mode: screen;
+}
+
+/* Individual fog particles with different sizes and positions */
+.fog-particle-1 {
+    width: 300px;
+    height: 100px;
+    background: radial-gradient(ellipse, rgba(120, 120, 120, 0.9) 0%, rgba(160, 160, 160, 0.6) 50%, transparent 70%);
+    bottom: -20px;
+    left: -150px;
+    animation-duration: 25s;
+    animation-delay: 0s;
+}
+
+.fog-particle-2 {
+    width: 400px;
+    height: 120px;
+    background: radial-gradient(ellipse, rgba(100, 100, 100, 0.8) 0%, rgba(140, 140, 140, 0.5) 50%, transparent 70%);
+    bottom: 10px;
+    left: -200px;
+    animation-duration: 30s;
+    animation-delay: -5s;
+    animation-direction: reverse;
+}
+
+.fog-particle-3 {
+    width: 250px;
+    height: 80px;
+    background: radial-gradient(ellipse, rgba(110, 110, 110, 0.85) 0%, rgba(150, 150, 150, 0.6) 50%, transparent 70%);
+    bottom: 40px;
+    left: -125px;
+    animation-duration: 35s;
+    animation-delay: -10s;
+}
+
+.fog-particle-4 {
+    width: 350px;
+    height: 110px;
+    background: radial-gradient(ellipse, rgba(90, 90, 90, 0.75) 0%, rgba(130, 130, 130, 0.5) 50%, transparent 70%);
+    bottom: -10px;
+    left: -175px;
+    animation-duration: 28s;
+    animation-delay: -15s;
+    animation-direction: reverse;
+}
+
+.fog-particle-5 {
+    width: 280px;
+    height: 90px;
+    background: radial-gradient(ellipse, rgba(105, 105, 105, 0.8) 0%, rgba(145, 145, 145, 0.55) 50%, transparent 70%);
+    bottom: 60px;
+    left: -140px;
+    animation-duration: 32s;
+    animation-delay: -8s;
+}
+
+.fog-particle-6 {
+    width: 320px;
+    height: 100px;
+    background: radial-gradient(ellipse, rgba(95, 95, 95, 0.7) 0%, rgba(135, 135, 135, 0.45) 50%, transparent 70%);
+    bottom: 20px;
+    left: -160px;
+    animation-duration: 26s;
+    animation-delay: -12s;
+    animation-direction: reverse;
+}
+
+.fog-particle-7 {
+    width: 200px;
+    height: 70px;
+    background: radial-gradient(ellipse, rgba(115, 115, 115, 0.85) 0%, rgba(155, 155, 155, 0.6) 50%, transparent 70%);
+    bottom: 80px;
+    left: -100px;
+    animation-duration: 38s;
+    animation-delay: -20s;
+}
+
+.fog-particle-8 {
+    width: 450px;
+    height: 130px;
+    background: radial-gradient(ellipse, rgba(85, 85, 85, 0.65) 0%, rgba(125, 125, 125, 0.4) 50%, transparent 70%);
+    bottom: -30px;
+    left: -225px;
+    animation-duration: 24s;
+    animation-delay: -3s;
+    animation-direction: reverse;
+}
+
+@keyframes fog-drift {
+    0% {
+        transform: translateX(0) translateY(0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateX(calc(100vw + 400px)) translateY(-20px) scale(1.1);
+        opacity: 0;
+    }
+}
+
+@keyframes fog-atmosphere {
+    0%, 100% { 
+        filter: brightness(1) contrast(1);
+    }
+    50% { 
+        filter: brightness(1.1) contrast(1.05);
+    }
+}
+
+/* Enhanced fog for dark backgrounds */
+@media (prefers-color-scheme: dark) {
+    .fog-particle {
+        filter: blur(35px);
+    }
+    
+    .fog-particle-1 { background: radial-gradient(ellipse, rgba(180, 180, 180, 0.95) 0%, rgba(200, 200, 200, 0.7) 50%, transparent 70%); }
+    .fog-particle-2 { background: radial-gradient(ellipse, rgba(160, 160, 160, 0.85) 0%, rgba(180, 180, 180, 0.6) 50%, transparent 70%); }
+    .fog-particle-3 { background: radial-gradient(ellipse, rgba(170, 170, 170, 0.9) 0%, rgba(190, 190, 190, 0.65) 50%, transparent 70%); }
+    .fog-particle-4 { background: radial-gradient(ellipse, rgba(150, 150, 150, 0.8) 0%, rgba(170, 170, 170, 0.55) 50%, transparent 70%); }
+    .fog-particle-5 { background: radial-gradient(ellipse, rgba(140, 140, 140, 0.85) 0%, rgba(160, 160, 160, 0.6) 50%, transparent 70%); }
+    .fog-particle-6 { background: radial-gradient(ellipse, rgba(130, 130, 130, 0.75) 0%, rgba(150, 150, 150, 0.5) 50%, transparent 70%); }
+    .fog-particle-7 { background: radial-gradient(ellipse, rgba(145, 145, 145, 0.9) 0%, rgba(165, 165, 165, 0.65) 50%, transparent 70%); }
+    .fog-particle-8 { background: radial-gradient(ellipse, rgba(125, 125, 125, 0.7) 0%, rgba(145, 145, 145, 0.45) 50%, transparent 70%); }
+}
+
+/* Animation Speed Variations */
+.speed-slow .halloween-bat {
+    animation-duration: 25s;
+}
+
+.speed-fast .halloween-bat {
+    animation-duration: 8s;
+}
+
+.speed-slow .halloween-ghost {
+    animation-duration: 35s;
+}
+
+.speed-fast .halloween-ghost {
+    animation-duration: 12s;
+}
+
+.speed-slow .halloween-pumpkin {
+    animation-duration: 20s;
+}
+
+.speed-fast .halloween-pumpkin {
+    animation-duration: 6s;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .halloween-bat,
+    .halloween-ghost {
+        font-size: 18px;
+    }
+    
+    .halloween-pumpkin {
+        font-size: 28px;
+    }
+    
+    .halloween-leaf {
+        font-size: 16px;
+    }
+    
+    .halloween-spider {
+        font-size: 14px;
+    }
+    
+    #halloween-fog {
+        height: 120px;
+        z-index: 9997; /* Lower on mobile to prevent interference */
+    }
+    
+    .fog-layer {
+        background: linear-gradient(to top, 
+            rgba(169, 169, 169, 0.5) 0%, 
+            rgba(169, 169, 169, 0.2) 40%, 
+            transparent 100%);
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .halloween-bat,
+    .halloween-ghost,
+    .halloween-pumpkin,
+    .halloween-leaf,
+    .halloween-spider {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        opacity: 0.3 !important;
+    }
+    
+    .fog-layer {
+        animation: none !important;
+        transform: translateX(-25%);
+        opacity: 0.4 !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .halloween-bat,
+    .halloween-spider {
+        color: #000000;
+        text-shadow: 1px 1px 2px #ffffff;
+    }
+    
+    .halloween-ghost {
+        color: #ffffff;
+        text-shadow: 1px 1px 2px #000000;
+    }
+}
+
+/* Print Styles - Hide all effects when printing */
+@media print {
+    #halloween-animations-container {
+        display: none !important;
+    }
+}
