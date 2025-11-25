@@ -1,0 +1,130 @@
+/* Banner Base Styles */
+.ha-notice-bar {
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Default background */
+    transition: all 0.3s ease;
+}
+
+.ha-notice-bar.ha-relative {
+    position: relative;
+}
+
+.ha-notice-bar.ha-top {
+    top: 0;
+}
+
+.ha-notice-bar.ha-bottom {
+    bottom: 0;
+}
+
+.ha-notice-bar.ha-admin-bar-top {
+    top: 32px; /* Adjust for WordPress admin bar */
+}
+
+@media screen and (max-width: 782px) {
+    .ha-notice-bar.ha-admin-bar-top {
+        top: 46px; /* Adjust for WordPress mobile admin bar */
+    }
+}
+
+.ha-notice-bar * {
+    box-sizing: border-box;
+}
+
+.ha-notice-bar-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Clearfix */
+.ha-notice-bar-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Typography */
+.ha-notice-bar-content p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+.ha-notice-bar-content a {
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+}
+
+.ha-notice-bar-content a:hover {
+    opacity: 0.8;
+}
+
+/* Countdown Timer */
+.ha-countdown {
+    display: inline-block;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.ha-countdown-item {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 2px 5px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.ha-countdown-label {
+    font-size: 0.8em;
+    opacity: 0.8;
+    margin-left: 2px;
+}
+
+/* Animations */
+@keyframes haScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes haBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes haFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes haSlideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes haSlideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes haBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes haPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}

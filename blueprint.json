@@ -1,0 +1,29 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "landingPage": "/wp-admin/admin.php?page=seasonal-effects",
+    "preferredVersions": {
+        "php": "8.0",
+        "wp": "latest"
+    },
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin"
+        },
+        {
+            "step": "setSiteOptions",
+            "options": {
+                "blogname": "Seasonal Effects Demo",
+                "blogdescription": "Experience festive animations and notice bars!"
+            }
+        },
+        {
+            "step": "activatePlugin",
+            "pluginPath": "halloween-animations/halloween-animations.php"
+        },
+        {
+            "step": "runPHP",
+            "code": "<?php update_option('halloween_animations_settings', array('plugin_enabled' => 1, 'mobile_enabled' => 1, 'display_pages' => array('all'), 'snowflakes_enabled' => 1, 'snowflakes_count' => 30, 'snowflakes_speed' => 'medium', 'snowflakes_size' => 15, 'christmas_lights_enabled' => 1, 'ornaments_enabled' => 1, 'ornaments_count' => 5)); ?>"
+        }
+    ]
+}
