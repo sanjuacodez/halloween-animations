@@ -2,10 +2,10 @@
 Contributors: sanju-shankar
 Donate link: https://buymeacoffee.com/sanjayshankar
 Tags: seasonal, animations, notice bar, black friday, christmas
-Requires at least: 5.0
+Requires at least: 5.5
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 2.3.1
+Stable tag: 2.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,13 @@ Maximize your Q4 revenue with dedicated tools:
 * 🍪 **Smart Closing:** Session-based, time-based (1h/1d/7d), or permanent dismissal
 * 📱 **Responsive:** Top/Bottom positioning with mobile support
 * 📝 **Rich Content:** Full WYSIWYG editor with color and font size controls
+
+**⏱️ Countdown Timer Block & Shortcode:**
+* Add a live countdown anywhere: the **Countdown Timer** block, or the `[seasonal_effects_countdown]` shortcode for classic editor, widgets and page builders
+* 5 styles (Simple, Rounded, Square, Filled, Circle), 3 sizes, long or short labels, custom colors
+* Uses your site's timezone, so every visitor counts down to the same moment
+* Shows the real time immediately (no "00:00" flash) and swaps to your own message when it ends
+* Loads its small CSS/JS only on pages that contain a timer
 
 **5 Sales Templates:**
 * ⚫ **Black Friday:** High-converting dark theme with red accents
@@ -140,6 +147,14 @@ Created with 🎃 by [Sanjay Shankar](https://sanjayshankar.me)
 
 Go to **Seasonal Effects → Notice Bar**, click the **Templates** tab, and select the **Black Friday** template. You can then customize the text and countdown timer in the Settings tab.
 
+= How do I add a countdown timer to a page or post? =
+
+In the block editor, add the **Countdown Timer** block and pick the end date. Everywhere else (classic editor, widgets, Elementor and other page builders), use the shortcode:
+
+`[seasonal_effects_countdown end="2026-11-27 23:59" style="rounded" title="Sale ends in"]`
+
+Options: `end` (in your site timezone), `style` (simple, rounded, square, filled, circle), `size` (small, medium, large), `labels` (long, short), `align` (left, center, right), `bg_color`, `text_color`, `show_seconds` (yes, no), `title`, `expired_text` (leave empty to hide the timer when it ends). The Seasonal Effects dashboard has a copy-ready example.
+
 = Can I schedule my Cyber Monday sale in advance? =
 
 Yes! In the Notice Bar settings under the **Schedule** tab, you can set a Start Date and End Date. The banner will automatically appear and disappear at your specified times.
@@ -201,7 +216,9 @@ Yes! If you find this plugin helpful:
 
 == Changelog ==
 
-= 2.3.1 - 2026-09-29 =
+= 2.4.0 - 2026-09-29 =
+* **New Feature:** Countdown Timer block and `[seasonal_effects_countdown]` shortcode, with 5 styles, 3 sizes and custom colors
+* **New:** Countdown Timer card with a copy-ready shortcode on the Seasonal Effects dashboard
 * **Tested:** WordPress 7.1
 * **Fixed:** PHP warning ("Undefined array key default") when saving Notice Bar settings
 * **Fixed:** Animations now correctly move clear of a fixed Notice Bar
@@ -240,8 +257,8 @@ Yes! If you find this plugin helpful:
 
 == Upgrade Notice ==
 
-= 2.3.1 =
-Maintenance release: tested with WordPress 7.1 and fixes a PHP warning when saving Notice Bar settings.
+= 2.4.0 =
+New Countdown Timer block and shortcode. Tested with WordPress 7.1, plus Notice Bar fixes.
 
 = 2.3.0 =
 Major Notice Bar update! Added Sales Templates, Advanced Visibility Rules, Timer Styles, and Smart Closing behaviors.

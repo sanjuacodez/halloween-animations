@@ -1,0 +1,102 @@
+/* Countdown timer — [seasonal_effects_countdown] shortcode and block. */
+.ha-countdown-timer {
+	--ha-ct-bg: #1e1e1e;
+	--ha-ct-fg: #ffffff;
+	--ha-ct-value: 2rem;
+	--ha-ct-label: 0.75rem;
+	--ha-ct-box: 4.5rem;
+	margin: 1.5em 0;
+	text-align: center;
+	line-height: 1.2;
+}
+
+.ha-countdown-timer.ha-ct-size-small { --ha-ct-value: 1.25rem; --ha-ct-label: 0.625rem; --ha-ct-box: 3.25rem; }
+.ha-countdown-timer.ha-ct-size-large { --ha-ct-value: 3rem; --ha-ct-label: 0.875rem; --ha-ct-box: 6.25rem; }
+
+.ha-countdown-timer.ha-ct-align-left { text-align: left; }
+.ha-countdown-timer.ha-ct-align-right { text-align: right; }
+
+.ha-countdown-timer .ha-ct-title {
+	margin: 0 0 0.5em;
+	font-weight: 600;
+}
+
+.ha-countdown-timer .ha-ct-units {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.ha-countdown-timer .ha-ct-unit {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-width: var(--ha-ct-box);
+	padding: 0.5em 0.25em;
+	box-sizing: border-box;
+}
+
+.ha-countdown-timer .ha-ct-value {
+	font-size: var(--ha-ct-value);
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	line-height: 1;
+}
+
+.ha-countdown-timer .ha-ct-label {
+	margin-top: 0.35em;
+	font-size: var(--ha-ct-label);
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	opacity: 0.8;
+}
+
+.ha-countdown-timer .ha-ct-sep {
+	font-size: var(--ha-ct-value);
+	font-weight: 700;
+	line-height: 1;
+	padding-top: 0.5em;
+}
+
+/* Simple: plain digits in the surrounding text colour. */
+.ha-countdown-timer.ha-ct-style-simple .ha-ct-unit { min-width: 0; padding: 0.5em 0; }
+.ha-countdown-timer.ha-ct-style-simple .ha-ct-value { color: inherit; }
+
+/* Boxed styles share the colours. */
+.ha-countdown-timer:not(.ha-ct-style-simple) .ha-ct-unit {
+	background: var(--ha-ct-bg);
+	color: var(--ha-ct-fg);
+}
+.ha-countdown-timer.ha-ct-style-rounded .ha-ct-unit { border-radius: 0.5rem; }
+.ha-countdown-timer.ha-ct-style-square .ha-ct-unit { border-radius: 0; }
+.ha-countdown-timer.ha-ct-style-filled .ha-ct-unit {
+	border-radius: 0.5rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.ha-countdown-timer.ha-ct-style-circle .ha-ct-unit {
+	width: var(--ha-ct-box);
+	height: var(--ha-ct-box);
+	padding: 0;
+	border-radius: 50%;
+}
+
+/* Expired: swap the digits for the message. */
+.ha-countdown-timer .ha-ct-expired { display: none; margin: 0; font-weight: 600; }
+.ha-countdown-timer.is-expired .ha-ct-units { display: none; }
+.ha-countdown-timer.is-expired .ha-ct-expired { display: block; }
+.ha-countdown-timer.is-expired .ha-ct-expired:empty { display: none; }
+
+.ha-countdown-timer-notice {
+	padding: 0.75em 1em;
+	border: 1px dashed currentColor;
+	opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+	.ha-countdown-timer { --ha-ct-box: 3.75rem; }
+	.ha-countdown-timer.ha-ct-size-large { --ha-ct-value: 2.25rem; --ha-ct-box: 4.75rem; }
+	.ha-countdown-timer .ha-ct-units { gap: 0.35rem; }
+}

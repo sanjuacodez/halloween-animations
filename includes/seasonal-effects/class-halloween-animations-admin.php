@@ -165,6 +165,30 @@ class Halloween_Animations_Admin {
                             </div>
                         </div>
                     </div>
+
+                    <div class="dashboard-card feature-card">
+                        <div class="card-icon" style="background: #fce4ec; color: #d81b60;">
+                            <span class="dashicons dashicons-clock"></span>
+                        </div>
+                        <div class="card-content">
+                            <h2><?php esc_html_e('Countdown Timer', 'halloween-animations'); ?></h2>
+                            <p><?php esc_html_e('Put a live sale or event countdown anywhere in your content. In the block editor, add the "Countdown Timer" block. Anywhere else (classic editor, widgets, page builders), paste the shortcode:', 'halloween-animations'); ?></p>
+                            <div class="ha-shortcode-copy">
+                                <?php $ha_example = '[seasonal_effects_countdown end="' . wp_date('Y') . '-11-27 23:59" style="rounded"]'; ?>
+                                <input type="text" readonly class="code" id="ha-countdown-shortcode" value="<?php echo esc_attr($ha_example); ?>" aria-label="<?php esc_attr_e('Countdown shortcode', 'halloween-animations'); ?>" onfocus="this.select();" />
+                                <button type="button" class="button" data-ha-copy="ha-countdown-shortcode" data-copied="<?php esc_attr_e('Copied!', 'halloween-animations'); ?>"><?php esc_html_e('Copy', 'halloween-animations'); ?></button>
+                            </div>
+                            <p class="description">
+                                <?php
+                                printf(
+                                    /* translators: %s: site timezone */
+                                    esc_html__('The end time uses your site timezone (%s). Options: style (simple, rounded, square, filled, circle), size (small, medium, large), labels (long, short), align, bg_color, text_color, show_seconds, title, expired_text.', 'halloween-animations'),
+                                    esc_html(wp_timezone_string())
+                                );
+                                ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Sidebar -->
@@ -1278,6 +1302,23 @@ class Halloween_Animations_Admin {
             array('jquery'),
             HALLOWEEN_ANIMATIONS_VERSION,
             true
+        );
+
+        // "Copy" buttons for shortcode snippets on the dashboard.
+        wp_add_inline_script('seasonal-admin-script', <<<'JS'
+document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-ha-copy]');
+    if (!btn) { return; }
+    var input = document.getElementById(btn.getAttribute('data-ha-copy'));
+    var label = btn.textContent;
+    var done = function () { btn.textContent = btn.getAttribute('data-copied'); setTimeout(function () { btn.textContent = label; }, 1500); };
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(input.value).then(done);
+    } else {
+        input.select(); document.execCommand('copy'); done();
+    }
+});
+JS
         );
     }
 }

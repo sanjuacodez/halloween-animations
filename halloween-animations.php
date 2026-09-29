@@ -1,23 +1,23 @@
 <?php
 /**
  * Plugin Name: Seasonal Effects & Notice Bar (formerly Halloween Animations)
- * Plugin URI: https://github.com/sanjuacodez/seasonal-effects
- * Description: Add festive seasonal animations and a versatile notice bar to your WordPress site. Perfect for Halloween, Christmas, New Year, Black Friday, and any special occasion!
- * Version: 2.3.1
+ * Plugin URI: https://github.com/sanjuacodez/halloween-animations
+ * Description: Add festive seasonal animations, a versatile notice bar and countdown timers to your WordPress site. Perfect for Halloween, Christmas, New Year, Black Friday, and any special occasion!
+ * Version: 2.4.0
  * Author: Sanjay Shankar
  * Author URI: https://sanjayshankar.me
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: halloween-animations
  * Domain Path: /languages
- * Requires at least: 5.0
+ * Requires at least: 5.5
  * Requires PHP: 7.2
  *
  * @package Halloween_Animations
  * @author Sanjay Shankar <me@sanjayshankar.me>
  * @link https://sanjayshankar.me
  * @link https://github.com/sanjuacodez
- * @link https://profiles.wordpress.org/sanjuacodez/
+ * @link https://profiles.wordpress.org/sanju-shankar/
  */
 
 // Prevent direct access
@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
 
 // Define plugin constants (keep backward compatibility)
 if (!defined('HALLOWEEN_ANIMATIONS_VERSION')) {
-    define('HALLOWEEN_ANIMATIONS_VERSION', '2.3.1');
+    define('HALLOWEEN_ANIMATIONS_VERSION', '2.4.0');
 }
 if (!defined('HALLOWEEN_ANIMATIONS_PLUGIN_DIR')) {
     define('HALLOWEEN_ANIMATIONS_PLUGIN_DIR', plugin_dir_path(__FILE__));
@@ -73,6 +73,10 @@ class Halloween_Animations {
         
         require_once HALLOWEEN_ANIMATIONS_PLUGIN_DIR . 'includes/seasonal-effects/class-halloween-animations-frontend.php';
         $this->frontend = new Halloween_Animations_Frontend();
+
+        // Countdown timer shortcode + block
+        require_once HALLOWEEN_ANIMATIONS_PLUGIN_DIR . 'includes/countdown/class-ha-countdown.php';
+        HA_Countdown::get_instance();
     }
     
     private function init_hooks() {
