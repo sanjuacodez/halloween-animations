@@ -1,0 +1,378 @@
+/* Admin Settings Page */
+.ha-settings-wrap {
+    max-width: 1200px;
+    margin: 0;
+    padding: 24px;
+}
+
+.ha-settings-wrap h1 {
+    color: #1e1e1e;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+/* Tabs */
+.ha-tab-nav {
+    margin-bottom: 20px;
+}
+
+.ha-tab-content {
+    display: none;
+}
+
+/* Settings Form */
+.ha-settings-form {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    padding: 24px;
+}
+
+.ha-settings-form h2 {
+    margin: 0;
+    padding: 16px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e1e1e;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.ha-settings-form .form-table {
+    display: block !important;
+    margin: 0 0 24px 0;
+}
+
+.ha-settings-form .form-table th {
+    width: 200px;
+    padding: 20px 10px 20px 0;
+    font-weight: 500;
+}
+
+.ha-settings-form .form-table td {
+    padding: 15px 10px;
+}
+
+/* Fields */
+.ha-field-wrap {
+    margin-bottom: 15px;
+}
+
+.ha-image-upload-wrap {
+    margin-top: 10px;
+}
+
+.ha-image-preview {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #f9f9f9;
+    max-width: 300px;
+}
+
+.ha-image-preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ha-image-controls {
+    margin-top: 10px;
+}
+
+.ha-remove-image {
+    margin-left: 10px;
+    color: #a00;
+    text-decoration: none;
+}
+
+.ha-remove-image:hover {
+    color: #dc3232;
+}
+
+/* Color Picker Fix */
+.wp-picker-container {
+    position: relative;
+    display: inline-block;
+}
+
+.wp-picker-container .wp-color-result.button {
+    height: 30px;
+    margin: 0 6px 6px 0;
+}
+
+/* Visual Select */
+.ha-visual-select-wrapper {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.ha-visual-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    background: #fff;
+    width: 100px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.ha-visual-option:hover {
+    border-color: #2271b1;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.ha-visual-option.selected {
+    border-color: #2271b1;
+    background: #f0f6fc;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.ha-visual-option.selected::after {
+    content: "✓";
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #2271b1;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.ha-visual-option input[type="radio"] {
+    display: none;
+}
+
+.ha-visual-preview {
+    display: block;
+    width: 60px;
+    height: 40px;
+    background: #eee;
+    margin-bottom: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Preview Shapes */
+.preview-simple {
+    background: transparent;
+}
+.preview-simple::after {
+    content: "00:00";
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.preview-rounded {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.preview-rounded::after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: #ccc;
+}
+
+.preview-square {
+    border-radius: 0;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.preview-square::after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: #ccc;
+}
+
+.preview-filled {
+    background: #333;
+    border-radius: 4px;
+}
+.preview-filled::after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: #fff;
+}
+
+.preview-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.ha-visual-label {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Composite Fields */
+.ha-composite-field {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    align-items: flex-end;
+}
+
+.ha-sub-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.ha-sub-field label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Templates Grid */
+.ha-templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.ha-template-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.ha-template-card:hover {
+    border-color: #2271b1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.ha-template-preview {
+    height: 120px;
+    background: #f0f0f1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+}
+
+.ha-template-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ha-template-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #1e1e1e;
+}
+
+.ha-template-info p {
+    margin: 0 0 15px 0;
+    color: #666;
+    font-size: 13px;
+    flex-grow: 1;
+}
+
+.ha-template-info .button {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Template Previews */
+.preview-black_friday {
+    background: #000;
+}
+.preview-black_friday::after {
+    content: "SALE";
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid #cc0000;
+    padding: 5px 10px;
+}
+
+.preview-cyber_monday {
+    background: linear-gradient(to right, #0f0c29, #302b63);
+}
+.preview-cyber_monday::after {
+    content: "CYBER";
+    color: #00ffff;
+    font-family: monospace;
+    font-size: 20px;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+.preview-christmas_sale {
+    background: #c41e3a;
+}
+.preview-christmas_sale::after {
+    content: "🎄 SALE";
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.preview-special_offer {
+    background: #ffd700;
+}
+.preview-special_offer::after {
+    content: "OFFER";
+    color: #000;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.preview-flash_sale {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+.preview-flash_sale::after {
+    content: "⚡ FLASH";
+    color: #fff;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Editor */
+.ha-field-wrap .wp-editor-wrap {
+    width: 100%;
+    max-width: 100%;
+}
+
+.ha-field-wrap .wp-editor-container {
+    border: 1px solid #ddd;
+}

@@ -17,13 +17,16 @@ delete_option('halloween_animations_settings');
 delete_transient('halloween_animations_cache');
 
 // Remove capabilities from roles
-$roles = array('administrator', 'editor');
-foreach ($roles as $role_name) {
-    $role = get_role($role_name);
-    if ($role) {
-        $role->remove_cap('manage_halloween_animations');
+function halloween_animations_remove_capabilities() {
+    $ha_roles = array('administrator', 'editor');
+    foreach ($ha_roles as $ha_role_name) {
+        $ha_role = get_role($ha_role_name);
+        if ($ha_role) {
+            $ha_role->remove_cap('manage_halloween_animations');
+        }
     }
 }
+halloween_animations_remove_capabilities();
 
 // Clean up any scheduled events (if we had any)
 wp_clear_scheduled_hook('halloween_animations_cleanup');

@@ -1,163 +1,250 @@
-=== Halloween Animations ===
-Contributors: sanju-shankar
-Tags: halloween, animations, effects, spooky, seasonal
+=== Seasonal Effects & Notice Bar (formerly Halloween Animations) ===
+Contributors: Sanju-shankar
+Donate link: https://buymeacoffee.com/sanjayshankar
+Tags: seasonal, animations, notice bar, black friday, christmas
 Requires at least: 5.0
 Tested up to: 6.8
-Requires PHP: 7.4
-Stable tag: 1.0.0
+Requires PHP: 7.2
+Stable tag: 2.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Add spooky Halloween animations to your WordPress site including flying bats, floating ghosts, running pumpkins, and more with full admin control.
+Boost your Black Friday & Cyber Monday sales with festive animations, countdown timers, and high-converting notice bars!
 
 == Description ==
 
-Transform your WordPress site into a spooky Halloween experience! Halloween Animations brings your website to life with animated Halloween effects that delight visitors and create an immersive seasonal atmosphere.
+**Seasonal Effects** is the ultimate toolkit for holiday marketing and seasonal decorations. 
 
-= 🦇 Animated Effects =
-* **Flying Bats** - Realistic sprite-based bat animations with multiple flight patterns
-* **Floating Ghosts** - Ethereal ghost sprites that float around the page
-* **Running Pumpkin** - Animated pumpkin character running across the screen
-* **Falling Leaves** - Autumn leaves gently falling with natural drift patterns
-* **Crawling Spiders** - Spiders that crawl vertically with web-line effects
-* **Advanced Fog** - Multi-particle fog system with realistic atmospheric effects
+🚀 **Boost Black Friday & Cyber Monday Sales**
+Create urgency with countdown timers, flash sale banners, and exclusive "Sale Mode" animations like falling price tags and shopping bags.
 
-= 🎮 Complete Admin Control =
-* Individual animation toggles - enable only what you want
-* Customizable counts for each effect (1-20 elements)
-* Speed controls (slow, medium, fast) for dynamic effects
-* Live animation testing directly in the admin panel
-* Comprehensive display options for precise targeting
+🎃 **Spooky Halloween Effects** - Crawling spiders, floating ghosts, flying bats, fog effects  
+🎄 **Festive Christmas Vibes** - Winter themes with falling snow, lights, and ornaments  
+🎆 **Celebration Ready** - New Year fireworks, confetti, and balloons
 
-= 🎯 Smart Display Options =
-* **Entire Website** - Show effects across all pages
-* **Homepage Only** - Limit to front page
-* **Posts/Pages Only** - Target specific content types
-* **Custom Post Types** - Support for any custom post type
-* **Category Selection** - Target specific post categories
-* **Mobile Control** - Option to disable on mobile devices
+### 🛍️ Black Friday & Cyber Monday Features
 
-= 🔊 Enhanced Sound System =
-* **Four Playback Modes**: Ambient, Random, Playlist, and Chaos modes
-* **Ambient Mode**: Continuous wind background with random spooky effects
-* **Random Mode**: Randomly selected sounds with customizable intervals  
-* **Playlist Mode**: Sequential playback of all selected sounds
-* **Chaos Mode**: Multiple simultaneous sounds for intense atmosphere
-* **Custom Sound Files**: Add your own MP3 files to the sounds directory
-* **Volume Control**: Adjustable master volume with user-friendly interface
-* **Smart Audio Handling**: Respects browser autoplay policies
+Maximize your Q4 revenue with dedicated tools:
+* **Countdown Timers:** Create FOMO with urgent timers in your notice bar.
+* **Sale Animations:** Falling "Sale" tags, shopping bags, and discount icons.
+* **Cyber Effects:** Matrix rain and glitch effects perfect for Cyber Monday tech deals.
+* **Pre-built Templates:** One-click setup for Black Friday (Dark/Red) and Cyber Monday (Neon/Tech).
+* **Scheduled Campaigns:** Set start/end dates for your sales banners automatically.
 
-= 📱 Performance & Accessibility =
-* Mobile optimized with device-specific controls
-* Respects user preferences for reduced motion
-* Lightweight animations that don't impact site speed
-* Cross-browser compatible
-* Screen reader friendly
+### ✨ Key Features
+
+**6 Beautiful Animations:**
+* 🦇 Flying Bats - Smooth flight patterns
+* 👻 Floating Ghosts - Mysterious floating
+* 🎃 Running Pumpkin - Rolling across screen
+* 🍂 Falling Leaves - Autumn atmosphere
+* 🕷️ Crawling Spiders - Realistic crawling motion
+* 🌫️ Fog Effect - Multi-layer fog drift
+
+**Smart Controls:**
+* Individual on/off toggles
+* Count controls (1-20 elements)
+* Speed variations (slow/medium/fast)
+* Mobile device support
+* Display location targeting
+
+**Notice Bar System:**
+* 🎨 **Advanced Design:** Gradients, background images, and custom colors
+* ⏱️ **Countdown Timer:** 5 styles (Simple, Rounded, Square, Filled, Circle)
+* 👁️ **Visibility Rules:** Show on specific pages (Home, Blog, Posts, CPTs)
+* 🍪 **Smart Closing:** Session-based, time-based (1h/1d/7d), or permanent dismissal
+* 📱 **Responsive:** Top/Bottom positioning with mobile support
+* 📝 **Rich Content:** Full WYSIWYG editor with color and font size controls
+
+**5 Sales Templates:**
+* ⚫ **Black Friday:** High-converting dark theme with red accents
+* 💻 **Cyber Monday:** Modern neon/tech aesthetic
+* 🎄 **Christmas Sale:** Festive holiday colors
+* ⭐ **Special Offer:** High contrast attention grabber
+* ⚡ **Flash Sale:** Urgent gradient design
+
+### 🎯 Perfect For
+
+* **Black Friday / Cyber Monday Sales**
+* Holiday themed websites
+* Seasonal sales and promotions
+* Event announcements
+* Blog posts and articles
+* E-commerce stores
+* Portfolio sites
+
+### ⚡ Performance
+
+* CSS-only animations (no JavaScript overhead)
+* GPU-accelerated transformations
+* Mobile-optimized
+* <50ms page load impact
+* 60fps smooth animations
+
+### 🔒 Privacy & Security
+
+* No external API calls
+* No data collection
+* No tracking cookies
+* All settings stored locally
+* Fully GDPR compliant
+
+### 👨‍💻 Developer
+
+Created with 🎃 by [Sanjay Shankar](https://sanjayshankar.me)
+
+**Connect:**
+* [WordPress Profile](https://profiles.wordpress.org/sanjuacodez/)
+* [GitHub](https://github.com/sanjuacodez)
+* [LinkedIn](https://www.linkedin.com/in/sanjayshankar/)
+* [Website](https://sanjayshankar.me)
+
+**Support Development:**
+* [Buy Me a Coffee](https://buymeacoffee.com/sanjayshankar) ☕
 
 == Installation ==
 
-1. Upload the plugin files to `/wp-content/plugins/halloween-animations/` directory
-2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Use the Settings > Halloween Effects screen to configure your animations
-4. Enable desired effects and customize their settings
-5. Save and enjoy your spooky website!
+### Automatic Installation
+
+1. Log in to WordPress admin
+2. Go to **Plugins → Add New**
+3. Search for "Seasonal Effects"
+4. Click **Install Now**
+5. Click **Activate**
+6. Go to **Site Animations → Seasonal Effects**
+
+### Manual Installation
+
+1. Download the plugin ZIP file
+2. Go to **Plugins → Add New → Upload Plugin**
+3. Choose the ZIP file
+4. Click **Install Now**
+5. Click **Activate**
+
+### Quick Start
+
+1. Go to **Site Animations → Seasonal Effects**
+2. Click **Templates** tab
+3. Choose a seasonal preset
+4. Click **Apply Template**
+5. Save settings
+6. Visit your website!
 
 == Frequently Asked Questions ==
 
-= How do I enable the Halloween effects? =
+= How do I set up a Black Friday sale banner? =
 
-After activating the plugin, go to Settings > Halloween Effects in your WordPress admin. Enable the animations you want, configure their settings, and save. The effects will appear on your frontend according to your display settings.
+Go to **Site Animations → Notice Bar**, click the **Templates** tab, and select the **Black Friday** template. You can then customize the text and countdown timer in the Settings tab.
 
-= Can I control where the effects appear? =
+= Can I schedule my Cyber Monday sale in advance? =
 
-Yes! You have complete control over where effects display:
-- Entire website
-- Homepage only
-- Posts only
-- Pages only
-- Specific post types
-- Specific categories
-- With mobile device controls
+Yes! In the Notice Bar settings under the **Schedule** tab, you can set a Start Date and End Date. The banner will automatically appear and disappear at your specified times.
 
-= Do the effects impact site performance? =
+= Will this slow down my website? =
 
-The plugin is designed for minimal performance impact:
-- Lightweight CSS animations
-- Smart loading (only when effects are enabled)
-- Mobile optimization
-- Automatic pause when tab is inactive
-- Memory-efficient timer management
+No! The animations are CSS-only and GPU-accelerated. Average page load impact is less than 50ms.
 
-= Can visitors control the sound effects? =
+= Can I use this with any theme? =
 
-Yes! When sound effects are enabled, visitors see a small sound toggle button. They can enable/disable sounds according to their preference. Sounds also automatically pause when the browser tab is inactive.
+Yes! Seasonal Effects works with any WordPress theme.
 
-= Are the effects mobile-friendly? =
+= Can I customize the animations? =
 
-Absolutely! The plugin includes:
-- Mobile-optimized animations
-- Responsive sizing
-- Option to disable effects on mobile devices
-- Touch-friendly controls
-- Bandwidth-conscious loading
+Absolutely! Control count, speed, and display locations for each effect.
 
-= Can I customize the appearance of effects? =
+= Is this compatible with WooCommerce? =
 
-Yes! The plugin includes comprehensive CSS classes that can be customized in your theme:
+Yes! Works perfectly with WooCommerce and other popular plugins.
 
-`.halloween-bat` - Style the flying bats
-`.halloween-ghost` - Customize ghost appearance  
-`.halloween-pumpkin` - Modify pumpkin effects
-`.halloween-leaf` - Style falling leaves
-`.halloween-spider` - Customize spider appearance
-`.fog-layer` - Modify fog effects
+= Can I disable effects on mobile? =
 
-= Is the plugin accessible? =
+Yes! There's a mobile device toggle in the General tab.
 
-Yes! The plugin respects accessibility guidelines:
-- Honors `prefers-reduced-motion` settings
-- High contrast mode support
-- No interference with screen readers
-- Keyboard navigation friendly
-- Print-friendly (effects hidden when printing)
+= Will my existing settings be preserved when updating? =
+
+Yes! The plugin is 100% backward compatible. All settings are automatically migrated.
+
+= How do I get support? =
+
+* [Support Forum](https://wordpress.org/support/plugin/halloween-animations)
+* [GitHub Issues](https://github.com/sanjuacodez/seasonal-effects/issues)
+* Email: me@sanjayshankar.me
+
+= How can I contribute? =
+
+* [GitHub Repository](https://github.com/sanjuacodez/seasonal-effects)
+* Submit pull requests
+* Report bugs
+* Suggest features
+
+= Can I support this plugin? =
+
+Yes! If you find this plugin helpful:
+* ⭐ [Rate it on WordPress.org](https://wordpress.org/support/plugin/halloween-animations/reviews/)
+* ☕ [Buy me a coffee](https://buymeacoffee.com/sanjayshankar)
+* 🐛 [Report bugs on GitHub](https://github.com/sanjuacodez/seasonal-effects/issues)
+* 💡 Share feature ideas
 
 == Screenshots ==
 
-1. Admin settings page with all Halloween effect controls
-2. Flying bats animation in action on a website
-3. Floating ghosts and fog effects combined
-4. Mobile view with optimized animations
-5. Sound control interface for visitors
+1. Templates tab with 5+ seasonal presets
+2. Animations tab with individual controls
+3. Sound settings with 4 playback modes
+4. Display controls for targeting
+5. Simple and cute animations.
+6. Notice bar with countdown timer
+7. Style countdown timer by yourself
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release
-* Flying bats with sprite-based animation system and multiple flight patterns
-* Floating ghosts with realistic ethereal movement
-* Running pumpkin animation with rotation effects
-* Falling leaves with natural drift and rotation patterns
-* Crawling spiders with vertical movement and web-line effects
-* Advanced multi-particle fog system with realistic atmospheric effects
-* Enhanced sound system with 4 distinct playback modes (Ambient, Random, Playlist, Chaos)
-* Comprehensive admin control panel with live animation testing
-* Complete display targeting options for precise control
-* Mobile optimization with device-specific controls
-* Accessibility features including reduced motion support
-* Cross-browser compatibility and performance optimizations
-* Developer-friendly code with hooks and filters
+= 2.3.0 - 2025-11-23 =
+* **New Feature:** Advanced Notice Bar Templates (Black Friday, Cyber Monday, Christmas, etc.)
+* **New Feature:** Visibility & Targeting Rules (Show on Home, Blog, Specific Post Types)
+* **New Feature:** Smart Closing Behavior (Session, 1 Hour, 1 Day, Forever)
+* **New Feature:** Countdown Timer Styles (Simple, Rounded, Square, Filled, Circle)
+* **New Feature:** Background Image support for Notice Bar
+* **Improved:** Rich Text Editor for Notice Content with color/size controls
+* **Improved:** Admin UI with Visual Selectors and Template Grid
+* **Improved:** "Reset Visibility" tool for admins
+
+= 2.2.0 - 2025-11-20 =
+* **Major Update** - Rebranded to Seasonal Effects
+* Added Templates tab with 8 quick presets
+* Improved spider crawling animation (removed web threads)
+* Fixed fog effect visibility and drift
+* Enhanced mobile performance
+* Better admin UI with clearer organization
+* One-time welcome notice for existing users
+* 100% backward compatible
+* Full details in CHANGELOG.md
+
+= 2.0.0 - 2024-10-01 =
+* Initial public release
+* 6 Halloween animations
+* Sound effect system
+* Notice bar functionality
+* Mobile device support
+
+= 1.0.0 - 2024-09-01 =
+* Beta release
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-Initial release of Halloween Animations. Start creating spooky experiences for your website visitors!
+= 2.3.0 =
+Major Notice Bar update! Added Sales Templates, Advanced Visibility Rules, Timer Styles, and Smart Closing behaviors.
 
-== Credits ==
+= 2.2.0 =
+Major upgrade! Now supports all seasonal occasions with templates. 100% backward compatible - your Halloween settings are safe!
 
-* Inspired by the jquery-halloween-bats project
-* Uses emoji characters for visual effects
-* Optimized for modern WordPress installations
+= 2.0.0 =
+Initial public release. Welcome to Seasonal Effects!
 
-== Support ==
+Made with 🎃 by [Sanjay Shankar](https://sanjayshankar.me)
 
-For support, documentation, and feature requests, please visit the plugin's repository or contact the developer through the WordPress.org support forums.
+If you find this plugin helpful, please:
+* ⭐ Rate it 5 stars on WordPress.org
+* ☕ [Buy me a coffee](https://buymeacoffee.com/sanjayshankar)
+* 📣 Share it with others
+* 💬 Leave a review
+
+Thank you for using Seasonal Effects! 🎉
