@@ -20,7 +20,10 @@ Create urgency with countdown timers, flash sale banners, and exclusive "Sale Mo
 
 🎃 **Spooky Halloween Effects** - Crawling spiders, floating ghosts, flying bats, fog effects  
 🎄 **Festive Christmas Vibes** - Winter themes with falling snow, lights, and ornaments  
-🎆 **Celebration Ready** - New Year fireworks, confetti, and balloons
+🎆 **Celebration Ready** - New Year fireworks, confetti, and balloons  
+💝 **Valentine's Day** - Floating hearts, heart confetti, and pulsating hearts  
+🐣 **Easter** - Easter eggs and hopping bunnies  
+🔊 **Sound Effects** - Optional themed sounds (witch laugh, wolf howl, jingle bells, fireworks and more)
 
 ### 🛍️ Black Friday & Cyber Monday Features
 
@@ -43,7 +46,7 @@ Maximize your Q4 revenue with dedicated tools:
 
 **Smart Controls:**
 * Individual on/off toggles
-* Count controls (1-20 elements)
+* Count controls for each effect
 * Speed variations (slow/medium/fast)
 * Mobile device support
 * Display location targeting
@@ -75,10 +78,10 @@ Maximize your Q4 revenue with dedicated tools:
 
 ### ⚡ Performance
 
-* CSS-only animations (no JavaScript overhead)
+* CSS-driven animations with a small script
+* Assets load only when an effect is enabled
 * GPU-accelerated transformations
 * Mobile-optimized
-* <50ms page load impact
 * 60fps smooth animations
 
 ### 🔒 Privacy & Security
@@ -86,8 +89,8 @@ Maximize your Q4 revenue with dedicated tools:
 * No external API calls
 * No data collection
 * No tracking cookies
-* All settings stored locally
-* Fully GDPR compliant
+* All settings stored in your own database
+* Notice bar dismissal is remembered in the visitor's browser only
 
 ### 👨‍💻 Developer
 
@@ -102,15 +105,6 @@ Created with 🎃 by [Sanjay Shankar](https://sanjayshankar.me)
 **Support Development:**
 * [Buy Me a Coffee](https://buymeacoffee.com/sanjayshankar) ☕
 
-Made with 🎃 by [Sanjay Shankar](https://sanjayshankar.me)
-
-If you find this plugin helpful, please:
-* ⭐ Rate it 5 stars on WordPress.org
-* ☕ [Buy me a coffee](https://buymeacoffee.com/sanjayshankar)
-* 📣 Share it with others
-* 💬 Leave a review
-
-Thank you for using Seasonal Effects! 🎉
 
 == Installation ==
 
@@ -121,7 +115,7 @@ Thank you for using Seasonal Effects! 🎉
 3. Search for "Seasonal Effects"
 4. Click **Install Now**
 5. Click **Activate**
-6. Go to **Site Animations → Seasonal Effects**
+6. Go to **Seasonal Effects → Site Animations**
 
 ### Manual Installation
 
@@ -133,7 +127,7 @@ Thank you for using Seasonal Effects! 🎉
 
 ### Quick Start
 
-1. Go to **Site Animations → Seasonal Effects**
+1. Go to **Seasonal Effects → Site Animations**
 2. Click **Templates** tab
 3. Choose a seasonal preset
 4. Click **Apply Template**
@@ -144,7 +138,7 @@ Thank you for using Seasonal Effects! 🎉
 
 = How do I set up a Black Friday sale banner? =
 
-Go to **Site Animations → Notice Bar**, click the **Templates** tab, and select the **Black Friday** template. You can then customize the text and countdown timer in the Settings tab.
+Go to **Seasonal Effects → Notice Bar**, click the **Templates** tab, and select the **Black Friday** template. You can then customize the text and countdown timer in the Settings tab.
 
 = Can I schedule my Cyber Monday sale in advance? =
 
@@ -152,7 +146,7 @@ Yes! In the Notice Bar settings under the **Schedule** tab, you can set a Start 
 
 = Will this slow down my website? =
 
-No! The animations are CSS-only and GPU-accelerated. Average page load impact is less than 50ms.
+No. The animations are CSS-driven and GPU-accelerated, and the plugin's files only load when at least one effect is enabled.
 
 = Can I use this with any theme? =
 
@@ -177,12 +171,12 @@ Yes! The plugin is 100% backward compatible. All settings are automatically migr
 = How do I get support? =
 
 * [Support Forum](https://wordpress.org/support/plugin/halloween-animations)
-* [GitHub Issues](https://github.com/sanjuacodez/seasonal-effects/issues)
+* [GitHub Issues](https://github.com/sanjuacodez/halloween-animations/issues)
 * Email: me@sanjayshankar.me
 
 = How can I contribute? =
 
-* [GitHub Repository](https://github.com/sanjuacodez/seasonal-effects)
+* [GitHub Repository](https://github.com/sanjuacodez/halloween-animations)
 * Submit pull requests
 * Report bugs
 * Suggest features
@@ -192,7 +186,7 @@ Yes! The plugin is 100% backward compatible. All settings are automatically migr
 Yes! If you find this plugin helpful:
 * ⭐ [Rate it on WordPress.org](https://wordpress.org/support/plugin/halloween-animations/reviews/)
 * ☕ [Buy me a coffee](https://buymeacoffee.com/sanjayshankar)
-* 🐛 [Report bugs on GitHub](https://github.com/sanjuacodez/seasonal-effects/issues)
+* 🐛 [Report bugs on GitHub](https://github.com/sanjuacodez/halloween-animations/issues)
 * 💡 Share feature ideas
 
 == Screenshots ==
