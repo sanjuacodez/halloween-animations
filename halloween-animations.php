@@ -3,7 +3,7 @@
  * Plugin Name: Seasonal Effects & Notice Bar (formerly Halloween Animations)
  * Plugin URI: https://github.com/sanjuacodez/seasonal-effects
  * Description: Add festive seasonal animations and a versatile notice bar to your WordPress site. Perfect for Halloween, Christmas, New Year, Black Friday, and any special occasion!
- * Version: 2.3.0
+ * Version: 2.3.1
  * Author: Sanjay Shankar
  * Author URI: https://sanjayshankar.me
  * License: GPL v2 or later
@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
 
 // Define plugin constants (keep backward compatibility)
 if (!defined('HALLOWEEN_ANIMATIONS_VERSION')) {
-    define('HALLOWEEN_ANIMATIONS_VERSION', '2.3.0');
+    define('HALLOWEEN_ANIMATIONS_VERSION', '2.3.1');
 }
 if (!defined('HALLOWEEN_ANIMATIONS_PLUGIN_DIR')) {
     define('HALLOWEEN_ANIMATIONS_PLUGIN_DIR', plugin_dir_path(__FILE__));
@@ -79,7 +79,6 @@ class Halloween_Animations {
         register_activation_hook(__FILE__, array($this, 'activate'));
         register_deactivation_hook(__FILE__, array($this, 'deactivate'));
         
-        add_action('plugins_loaded', array($this, 'load_textdomain'));
         add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'add_action_links'));
         
         // Add admin notice for rebranding
@@ -334,10 +333,6 @@ class Halloween_Animations {
     
     public function deactivate() {
         flush_rewrite_rules();
-    }
-    
-    public function load_textdomain() {
-        load_plugin_textdomain('halloween-animations', false, dirname(plugin_basename(__FILE__)) . '/languages');
     }
     
     public function add_action_links($links) {

@@ -255,12 +255,12 @@ class Halloween_Animations_Frontend {
      * @return array Notice bar position settings
      */
     private function get_notice_bar_position_settings() {
-        $notice_bar_options = get_option('notice_bar_options', array());
-        
+        $notice_bar_options = get_option('ha_notice_bar_settings', array());
+
         return array(
-            'enabled' => isset($notice_bar_options['enable_notice_bar']) ? $notice_bar_options['enable_notice_bar'] : false,
+            'enabled' => isset($notice_bar_options['enable']) && 'yes' === $notice_bar_options['enable'],
             'position' => isset($notice_bar_options['position']) ? $notice_bar_options['position'] : 'top',
-            'position_type' => isset($notice_bar_options['position_type']) ? $notice_bar_options['position_type'] : 'fixed'
+            'position_type' => isset($notice_bar_options['type']) ? $notice_bar_options['type'] : 'fixed'
         );
     }
 

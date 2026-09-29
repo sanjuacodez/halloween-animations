@@ -516,8 +516,8 @@ class HA_Notice_Bar_Settings {
                         $sanitized[$field_id] = sanitize_text_field($input[$field_id]);
                     }
                 } else {
-                    // Only set default if it's not a composite container itself
-                    if ($field['type'] !== 'composite') {
+                    // Action fields such as buttons store nothing and have no default.
+                    if (array_key_exists('default', $field)) {
                         $sanitized[$field_id] = $field['default'];
                     }
                 }
@@ -534,7 +534,7 @@ class HA_Notice_Bar_Settings {
                     foreach ($field['sub_fields'] as $sub_id => $sub_field) {
                         $defaults[$sub_id] = $sub_field['default'];
                     }
-                } else {
+                } elseif (array_key_exists('default', $field)) {
                     $defaults[$field_id] = $field['default'];
                 }
             }

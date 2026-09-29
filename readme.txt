@@ -1,11 +1,11 @@
 === Seasonal Effects & Notice Bar (formerly Halloween Animations) ===
-Contributors: Sanju-shankar
+Contributors: sanju-shankar
 Donate link: https://buymeacoffee.com/sanjayshankar
 Tags: seasonal, animations, notice bar, black friday, christmas
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 2.3.0
+Stable tag: 2.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,13 +94,23 @@ Maximize your Q4 revenue with dedicated tools:
 Created with 🎃 by [Sanjay Shankar](https://sanjayshankar.me)
 
 **Connect:**
-* [WordPress Profile](https://profiles.wordpress.org/sanjuacodez/)
+* [WordPress Profile](https://profiles.wordpress.org/sanju-shankar/)
 * [GitHub](https://github.com/sanjuacodez)
 * [LinkedIn](https://www.linkedin.com/in/sanjayshankar/)
 * [Website](https://sanjayshankar.me)
 
 **Support Development:**
 * [Buy Me a Coffee](https://buymeacoffee.com/sanjayshankar) ☕
+
+Made with 🎃 by [Sanjay Shankar](https://sanjayshankar.me)
+
+If you find this plugin helpful, please:
+* ⭐ Rate it 5 stars on WordPress.org
+* ☕ [Buy me a coffee](https://buymeacoffee.com/sanjayshankar)
+* 📣 Share it with others
+* 💬 Leave a review
+
+Thank you for using Seasonal Effects! 🎉
 
 == Installation ==
 
@@ -197,6 +207,12 @@ Yes! If you find this plugin helpful:
 
 == Changelog ==
 
+= 2.3.1 - 2026-09-29 =
+* **Tested:** WordPress 7.1
+* **Fixed:** PHP warning ("Undefined array key default") when saving Notice Bar settings
+* **Fixed:** Animations now correctly move clear of a fixed Notice Bar
+* **Improved:** Removed a redundant translation loader; WordPress.org loads translations automatically
+
 = 2.3.0 - 2025-11-23 =
 * **New Feature:** Advanced Notice Bar Templates (Black Friday, Cyber Monday, Christmas, etc.)
 * **New Feature:** Visibility & Targeting Rules (Show on Home, Blog, Specific Post Types)
@@ -230,6 +246,9 @@ Yes! If you find this plugin helpful:
 
 == Upgrade Notice ==
 
+= 2.3.1 =
+Maintenance release: tested with WordPress 7.1 and fixes a PHP warning when saving Notice Bar settings.
+
 = 2.3.0 =
 Major Notice Bar update! Added Sales Templates, Advanced Visibility Rules, Timer Styles, and Smart Closing behaviors.
 
@@ -238,13 +257,3 @@ Major upgrade! Now supports all seasonal occasions with templates. 100% backward
 
 = 2.0.0 =
 Initial public release. Welcome to Seasonal Effects!
-
-Made with 🎃 by [Sanjay Shankar](https://sanjayshankar.me)
-
-If you find this plugin helpful, please:
-* ⭐ Rate it 5 stars on WordPress.org
-* ☕ [Buy me a coffee](https://buymeacoffee.com/sanjayshankar)
-* 📣 Share it with others
-* 💬 Leave a review
-
-Thank you for using Seasonal Effects! 🎉
