@@ -1,0 +1,78 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#fff}svg{display:block}</style></head><body>
+<svg id="S" viewBox="0 0 256 256" width="256" height="256" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="g0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2D0B45"/><stop offset="1" stop-color="#5B1A7A"/></linearGradient>
+  <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B2A55"/><stop offset="1" stop-color="#1D5FA8"/></linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F0F12"/><stop offset="1" stop-color="#2E2A38"/></linearGradient>
+  <clipPath id="card"><rect x="38" y="60" width="180" height="160" rx="20"/></clipPath>
+ </defs>
+ <g id="scenes"></g>
+</svg>
+<script>
+const NS='http://www.w3.org/2000/svg', T=4.8, W=1.6, F=.32;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), seg=(t,a,b)=>clamp((t-a)/(b-a),0,1);
+const io=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+const scenes=[
+ { bg:'url(#g0)', bar:'#F97316', emblem:`
+   <g id="emb0"><path d="M0 -34 C-2 -44 4 -50 10 -50" fill="none" stroke="#4D7C0F" stroke-width="7" stroke-linecap="round"/>
+   <ellipse cx="-20" cy="0" rx="24" ry="32" fill="#EA580C"/><ellipse cx="20" cy="0" rx="24" ry="32" fill="#EA580C"/>
+   <ellipse cx="0" cy="0" rx="24" ry="34" fill="#F97316"/>
+   <path d="M-22 -8 L-12 -18 L-4 -8 Z M22 -8 L12 -18 L4 -8 Z" fill="#3B0764"/>
+   <path d="M-22 8 Q0 26 22 8 Q12 14 6 12 L2 18 L-2 12 L-6 18 L-10 12 Q-16 14 -22 8 Z" fill="#3B0764"/></g>`,
+   particles:{ n:10, draw:(i)=>i%2?`<path d="M-9 0 Q-5 -6 0 -1 Q5 -6 9 0 Q5 -2 0 3 Q-5 -2 -9 0 Z" fill="#1A0726"/>`:`<circle r="3" fill="#FDBA74"/>` } },
+ { bg:'url(#g1)', bar:'#DC2626', emblem:`
+   <g id="emb1" stroke="#1D5FA8" stroke-width="7" stroke-linecap="round" fill="none">
+   ${[0,60,120,180,240,300].map(a=>`<g transform="rotate(${a})"><path d="M0 0 V-40"/><path d="M0 -26 L-10 -36 M0 -26 L10 -36"/></g>`).join('')}
+   <circle r="7" fill="#1D5FA8" stroke="none"/></g>`,
+   particles:{ n:16, draw:(i)=>`<circle r="${2+(i%3)}" fill="#fff" opacity="${.6+.4*((i*7)%3)/2}"/>` } },
+ { bg:'url(#g2)', bar:'#FACC15', emblem:`
+   <g id="emb2"><path d="M-36 -24 H18 L40 0 L18 24 H-36 Q-42 24 -42 18 V-18 Q-42 -24 -36 -24 Z" fill="#FACC15"/>
+   <circle cx="20" cy="0" r="6" fill="#2E2A38"/>
+   <text x="-12" y="11" text-anchor="middle" font-family="-apple-system,'Segoe UI',sans-serif" font-weight="900" font-size="32" fill="#18181B">%</text></g>`,
+   particles:{ n:14, draw:(i)=>`<rect x="-3" y="-6" width="6" height="12" rx="1.5" fill="${['#FACC15','#fff','#F472B6','#60A5FA'][i%4]}"/>` } },
+];
+const root=document.getElementById('scenes'), groups=[];
+const rnd=(i,k)=>{ const x=Math.sin(i*12.9898+k*78.233)*43758.5453; return x-Math.floor(x); };
+scenes.forEach((s,si)=>{
+  const g=document.createElementNS(NS,'g');
+  let parts='';
+  for(let i=0;i<s.particles.n;i++) parts+=`<g class="p" data-i="${i}">${s.particles.draw(i)}</g>`;
+  g.innerHTML=`<rect width="256" height="256" fill="${s.bg}"/>
+   <g class="back">${parts}</g>
+   <rect x="38" y="60" width="180" height="160" rx="20" fill="#fff"/>
+   <g clip-path="url(#card)"><g class="bar"><rect x="38" y="60" width="180" height="34" fill="${s.bar}"/>
+     <rect x="56" y="71" width="12" height="12" rx="3" fill="#fff" opacity=".9"/><rect x="72" y="71" width="12" height="12" rx="3" fill="#fff" opacity=".9"/><rect x="88" y="71" width="12" height="12" rx="3" fill="#fff" opacity=".9"/>
+     <rect x="150" y="70" width="52" height="14" rx="7" fill="#fff" opacity=".9"/></g></g>
+   <g class="emb" transform="translate(128 158)">${s.emblem}</g>
+   <g class="front">${parts}</g>`;
+  root.appendChild(g); groups.push(g);
+});
+window.render=(id,t)=>{
+  t=((t%T)+T)%T;
+  groups.forEach((g,si)=>{
+    let local=t-si*W; if(local<-1e-6) local+=T; // tolerant of float rounding at window edges
+    let o=0, bar=0;
+    if(local<W-1e-6){o=1;}
+    else if(local>=T-F){const k=(local-(T-F))/F;o=k;bar=-34*(1-io(k));}
+    g.setAttribute('opacity',o.toFixed(3));
+    if(local>=T-F) root.appendChild(g);
+    g.querySelector('.bar').setAttribute('transform',`translate(0 ${bar.toFixed(2)})`);
+    // emblem motion over the scene, seamless at its ends
+    const e=g.querySelector('.emb'), ph=(local%T)/T;
+    const motion=[`translate(128 ${(158+4*Math.sin(2*Math.PI*ph*3)).toFixed(2)})`,
+                  `translate(128 158) rotate(${(60*ph*3).toFixed(2)})`,
+                  `translate(128 158) rotate(${(-8+6*Math.sin(2*Math.PI*ph*3)).toFixed(2)})`][si];
+    e.setAttribute('transform',motion);
+    // particles fall seamlessly over the loop
+    g.querySelectorAll('.p').forEach(p=>{
+      const i=+p.dataset.i, front=p.closest('.front')!==null;
+      const x=10+236*rnd(i,si+1), speed=(1+Math.floor(rnd(i,si+5)*2))*290/T;
+      const y=((rnd(i,si+9)*290+speed*t)%290)-20;
+      const spin=si===2?` rotate(${(360*((t/T)*2+rnd(i,3))).toFixed(1)})`:'';
+      p.setAttribute('transform',`translate(${x.toFixed(1)} ${y.toFixed(1)})${spin}`);
+      p.setAttribute('opacity', front ? (i%3===0?1:0) : (i%3===0?0:1));
+    });
+  });
+};
+window.render('S',0);
+</script></body></html>
