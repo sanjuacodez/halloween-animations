@@ -3,7 +3,7 @@
  * Plugin Name: Seasonal Effects & Notice Bar (formerly Halloween Animations)
  * Plugin URI: https://github.com/sanjuacodez/halloween-animations
  * Description: Add festive seasonal animations, a versatile notice bar and countdown timers to your WordPress site. Perfect for Halloween, Christmas, New Year, Black Friday, and any special occasion!
- * Version: 2.4.0
+ * Version: 2.4.1
  * Author: Sanjay Shankar
  * Author URI: https://sanjayshankar.me
  * License: GPL v2 or later
@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
 
 // Define plugin constants (keep backward compatibility)
 if (!defined('HALLOWEEN_ANIMATIONS_VERSION')) {
-    define('HALLOWEEN_ANIMATIONS_VERSION', '2.4.0');
+    define('HALLOWEEN_ANIMATIONS_VERSION', '2.4.1');
 }
 if (!defined('HALLOWEEN_ANIMATIONS_PLUGIN_DIR')) {
     define('HALLOWEEN_ANIMATIONS_PLUGIN_DIR', plugin_dir_path(__FILE__));

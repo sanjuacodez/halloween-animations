@@ -5,7 +5,7 @@ Tags: seasonal, animations, notice bar, black friday, christmas
 Requires at least: 5.5
 Tested up to: 7.1
 Requires PHP: 7.2
-Stable tag: 2.4.0
+Stable tag: 2.4.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -233,6 +233,11 @@ Yes! If you find this plugin helpful:
 
 == Changelog ==
 
+= 2.4.1 - 2026-10-22 =
+* New: optional newsletter sign-up from the plugin author on the Seasonal Effects dashboard and Site Animations screen. Nothing is sent unless you click Subscribe, and closing the card hides it for 30 days.
+* New: optional one-question survey when you deactivate the plugin, to help improve it. Skip & deactivate sends nothing.
+* Docs: new External services section in the readme describing both.
+
 = 2.4.0 - 2026-09-29 =
 * **New Feature:** Countdown Timer block and `[seasonal_effects_countdown]` shortcode, with 5 styles, 3 sizes and custom colors
 * **New:** Countdown Timer card with a copy-ready shortcode on the Seasonal Effects dashboard
@@ -273,6 +278,9 @@ Yes! If you find this plugin helpful:
 * Beta release
 
 == Upgrade Notice ==
+
+= 2.4.1 =
+Adds an optional author newsletter sign-up and an optional deactivation survey. No changes to your effects, notice bar or countdowns.
 
 = 2.4.0 =
 New Countdown Timer block and shortcode. Tested with WordPress 7.1, plus Notice Bar fixes.
