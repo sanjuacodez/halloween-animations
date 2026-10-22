@@ -39,6 +39,25 @@ if (!defined('HALLOWEEN_ANIMATIONS_PLUGIN_FILE')) {
     define('HALLOWEEN_ANIMATIONS_PLUGIN_FILE', __FILE__);
 }
 
+// Shared "Plugins by Sanjay Shankar" newsletter card and deactivation survey.
+require_once HALLOWEEN_ANIMATIONS_PLUGIN_DIR . 'includes/connect/connect.php';
+add_filter('sanjayshankar_connect_plugins', 'halloween_animations_connect_register');
+
+/**
+ * Lists the plugin in the shared newsletter card and deactivation survey.
+ *
+ * @param array $plugins Slug => details.
+ * @return array
+ */
+function halloween_animations_connect_register($plugins) {
+    $plugins['halloween-animations'] = array(
+        'name'    => 'Seasonal Effects & Notice Bar',
+        'file'    => plugin_basename(HALLOWEEN_ANIMATIONS_PLUGIN_FILE),
+        'version' => HALLOWEEN_ANIMATIONS_VERSION,
+    );
+    return $plugins;
+}
+
 /**
  * Main plugin class - Backward compatible
  */

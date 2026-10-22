@@ -111,6 +111,8 @@ class Halloween_Animations_Admin {
                 </div>
             </div>
             
+            <?php do_action('sanjayshankar_connect_card', 'halloween-animations'); ?>
+
             <div class="dashboard-status-bar">
                 <div class="status-item <?php echo $plugin_enabled ? 'active' : 'inactive'; ?>">
                     <span class="status-icon dashicons dashicons-<?php echo $plugin_enabled ? 'yes' : 'no'; ?>"></span>
@@ -541,6 +543,8 @@ class Halloween_Animations_Admin {
                 }
                 ?>
             </div>
+
+            <?php do_action('sanjayshankar_connect_box', 'halloween-animations'); ?>
         </div>
         <?php
     }
